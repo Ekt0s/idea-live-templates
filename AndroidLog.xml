@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templateSet group="AndroidLog">
-  <template name="logd" value="Log.d(TAG, &quot;$METHOD_NAME$ $content$&quot;);" description="Log.d(TAG, String)" toReformat="true" toShortenFQNames="true">
+  <template name="logd" value="Log.d(TAG, &quot;$METHOD_NAME$ | $content$&quot;);" description="Log.d(TAG, String)" toReformat="true" toShortenFQNames="true">
     <variable name="METHOD_NAME" expression="methodName()" defaultValue="" alwaysStopAt="false" />
     <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -23,7 +23,7 @@
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="loge" value="Log.e(TAG, &quot;$METHOD_NAME$ $content$&quot;);" description="Log.e(TAG, String)" toReformat="true" toShortenFQNames="true">
+  <template name="loge" value="Log.e(TAG, &quot;$METHOD_NAME$ | $content$&quot;);" description="Log.e(TAG, String)" toReformat="true" toShortenFQNames="true">
     <variable name="METHOD_NAME" expression="methodName()" defaultValue="" alwaysStopAt="false" />
     <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -46,8 +46,8 @@
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="logi" value="Log.i(TAG, &quot;$METHOD_NAME$ $content$&quot;);" description="Log.i(TAG, String)" toReformat="true" toShortenFQNames="true">
-    <variable name="METHOD_NAME" expression="methodName()" defaultValue="" alwaysStopAt="false" />
+  <template name="logi" value="Log.i(TAG, &quot;$METHOD_NAME$ | $content$&quot;);" description="Log.i(TAG, String)" toReformat="true" toShortenFQNames="true">
+    <variable name="METHOD_NAME" expression="capitalize(methodName())" defaultValue="" alwaysStopAt="false" />
     <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="false" />
@@ -92,7 +92,7 @@
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="logt" value="private static final String TAG = &quot;$className$&quot;;" description="A static logtag with your current classname" toReformat="true" toShortenFQNames="true">
+  <template name="logtag" value="public static final String TAG = $className$.class.getSimpleName();" description="A static logtag with your current classname" toReformat="true" toShortenFQNames="true">
     <variable name="className" expression="className()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="false" />
@@ -158,6 +158,27 @@
       <option name="GROOVY_DECLARATION" value="false" />
       <option name="MAVEN" value="false" />
       <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="logv" value="Log.d(TAG, &quot;$METHOD_NAME$ $content$&quot;);" description="Log.v(TAG, String)" toReformat="false" toShortenFQNames="true">
+    <variable name="METHOD_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+    </context>
+  </template>
+  <template name="logw" value="Log.d(TAG, &quot;$METHOD_NAME$ | $content$&quot;);" description="Log.w(TAG, String)" toReformat="false" toShortenFQNames="true">
+    <variable name="METHOD_NAME" expression="methodName()" defaultValue="" alwaysStopAt="false" />
+    <variable name="content" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
     </context>
   </template>
 </templateSet>
