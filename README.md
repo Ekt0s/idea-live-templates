@@ -13,7 +13,7 @@ Once you found it, `cd` into it, run `git clone https://github.com/keyboardsurfe
 
 ### Android.xml
 - **`const`**: "Define android style int constant"
-- **`fbc`**: "findViewById with cast"
+- **`fbi`**: "findViewById with cast"
 - **`foreach`**: "Create a for each loop"
 - **`gone`**: "Set view visibility to GONE"
 - **`IntentView`**: "Creates an Intent with ACTION_VIEW"
@@ -53,6 +53,7 @@ Once you found it, `cd` into it, run `git clone https://github.com/keyboardsurfe
 - **`logd`**: "Log.d(TAG, String)"
 - **`loge`**: "Log.e(TAG, String)"
 - **`logi`**: "Log.i(TAG, String)"
+- **`logw`**: "Log.w(TAG, String)"
 - **`logm`**: "Log method name and its arguments"
 - **`logr`**: "Log result of this method"
 - **`logt`**: "A static logtag with your current classname"
