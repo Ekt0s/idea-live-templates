@@ -78,6 +78,9 @@ Once you found it, `cd` into it, run `git clone https://github.com/keyboardsurfe
 - **`lww`**: "android:layout_width=&quot;wrap_content&quot;"
 - **`toolsNs`**: "adds tools namespace to Android xml file"
 
+### LGsjava.xml
+- **`pfs`**: "adds a private static final String $FieldName"
+
 ##Contribution
 1. Fork
 2. Add your own live templates
